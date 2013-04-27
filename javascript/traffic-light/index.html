@@ -1,0 +1,23 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>Traffic light status - Hickerspace</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+		<script src="traffic-light.js"></script>
+		<style>
+			.light { display: block; width: 100px; height: 100px; background-color: grey; border: 1px solid black; -moz-border-radius: 20px; -webkit-border-radius: 20px; -o-border-radius: 20px; }
+			.ampel { background-color: black; padding: 10px; width: 100px; -moz-border-radius: 5px; -webkit-border-radius: 5px; -o-border-radius: 5px; margin: auto; }
+			#content { margin: auto; width: 250px; text-align: center; }
+		</style>
+	</head>
+	<body>
+		<div id="content">
+			<div class="ampel">
+				<span id="red" class="light">&nbsp;</span>
+				<span id="yellow" class="light">&nbsp;</span>
+				<span id="green" class="light">&nbsp;</span>
+			</div>
+			<span id="mode" />
+		</div>
+	</body>
+</html>

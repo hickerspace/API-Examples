@@ -1,0 +1,76 @@
+a:link { color: black; }
+a:visited { color: black; }
+a:hover { color: black; }
+a:active { color: black; }
+
+body {
+	background-color: #fbe36d;
+	font-family: "HelveticaNeueLight", "HelveticaNeue-Light", "Helvetica Neue Light", "HelveticaNeue", "Helvetica Neue", "TeXGyreHerosRegular", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+}
+
+a {
+	text-decoration: none;
+	border-bottom: 1px dashed;
+}
+
+#copyright {
+	font-size: 75%;
+	width: 500px;
+	position: absolute;
+	bottom: -20%;
+	text-align: center;
+}
+
+#main {
+	background: url('img/logo.jpg') no-repeat center;
+	position: relative;
+	margin-top: 30px;
+	width: 500px;
+	height: 500px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 130px;
+}
+
+div.summary {
+	float: left;
+	top: 50%;
+	width: 230px;
+	height: 304px;
+	position: relative;
+	margin-left: 70px;
+}
+
+div.fsb {
+	float: right;
+	background: url('img/meter.png') no-repeat bottom left;
+	top: 48%;
+	width: 130px;
+	height: 304px;
+	position: relative;
+	margin-right: 20px;
+}
+
+div.fortschritt {
+	position: absolute;
+	margin-top: 2px;
+	margin-bottom: 2px;
+	bottom: 0;
+	height: 100%;
+	width: 34px;
+	top: 43%;
+	text-align: center;
+	font-size: 200%;
+	color: grey;
+	font-weight: bold;
+
+}
+
+#bottlesleft {
+	font-weight: bold;
+	font-size: 110%;
+}
+
+.explanation {
+	text-align: justify;
+}

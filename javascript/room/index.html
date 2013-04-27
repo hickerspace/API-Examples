@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>Room status - Hickerspace</title>
+	</head>
+	<body>
+		<span id="statusHickerspace"></span>
+
+		<script type="text/javascript">
+		function createCORSRequest(method, url){
+			var xhr = new XMLHttpRequest();
+			if ("withCredentials" in xhr){
+				xhr.open(method, url, true);
+			} else if (typeof XDomainRequest != "undefined"){
+				xhr = new XDomainRequest();
+				xhr.open(method, url);
+			} else {
+				xhr = null;
+			}
+			return xhr;
+		}
+
+		var request = createCORSRequest("get", "http://hickerspace.org/api/room/");
+		if (request){
+			request.onload = function() {
+				roomStatus = JSON.parse(request.responseText);
+
+				var since = new Date();
+				since.setTime (roomStatus.since * 1000);
+				var year = since.getFullYear();
+				var month = since.getMonth()+1;
+				var date = since.getDate();
+				var hours = since.getHours();
+				var minutes = since.getMinutes();
+
+				if (date<10) date = "0" + date;
+				if (month<10) month = "0" + month;
+				if (hours<10) hours = "0" + hours;
+				if (minutes<10) minutes = "0" + minutes;
+
+				var sinceString = date + "." + month + "." + year + " um " + hours + ":" + minutes + " Uhr";
+				var status;
+
+				if (roomStatus.roomStatus == "closed") {
+					status = "Der Hickerspace ist seit dem " + sinceString + " geschlossen.";
+				} else {
+					status = "Der Hickerspace ist seit " + sinceString + " offen.";
+				}
+				document.getElementById("statusHickerspace").innerHTML = status;
+			};
+			request.send();
+		}
+		</script>
+	</body>
+</html>
