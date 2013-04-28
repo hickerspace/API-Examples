@@ -3,6 +3,6 @@ Small code snippets in different programming languages showing how to use our [R
 Javascript
 ========
 
-* room status
-* [mate-o-meter](https://github.com/hickerspace/Mate-O-Meter)
-* traffic light
+* room status (pure JS)
+* [mate-o-meter](https://github.com/hickerspace/Mate-O-Meter) (jQuery)
+* traffic light (jQuery)
