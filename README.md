@@ -14,3 +14,9 @@ Python
 	- Bitcoin (simple JSON)
 	- Indymedia ([lxml.etree](http://lxml.de/api.html))
 	- Postillon Newsticker ([feedparser](https://pypi.python.org/pypi/feedparser/))
+
+Bash
+====
+
+* [ledticker](http://hickerspace.org/wiki/LED-Ticker) (send time, fortune)
+
